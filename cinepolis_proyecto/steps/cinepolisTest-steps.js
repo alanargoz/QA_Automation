@@ -12,7 +12,6 @@ defineSupportCode(function({ Given, Then, When }) {
 
     Then('I verify I\'m on Cinépolis website', function () {
         console.log(driver.getTitle());
-
     });
 
     Then('I go to cities box and select Morelia', function () {
@@ -24,22 +23,15 @@ defineSupportCode(function({ Given, Then, When }) {
         
         driver.findElement(By.xpath("/html//select[@id='cmbComplejos']")).click()
         driver.sleep(500);
-        //driver.findElement(By.xpath("/html//select[@id='cmbComplejos']//option[5]")).click();  
-        //driver.sleep(500);  
-
     });
 
     Given('I land on Cinépolis Morelia Centro billboards', function () {
         driver.get('https://cinepolis.com/cartelera/morelia/cinepolis-morelia-centro');
         driver.sleep(1000);
-        //driver.findElement(By.xpath(" /html//a[text()='22:40']]")).click();
-        //driver.sleep(5000);
     });
 
     Then('I choose Bloodshot as the movie I want to watch', function () {
-        //driver.sleep(2000);
         driver.findElement(By.xpath("/html//a[@id='34490-cinepolis-morelia-centro-bloodshot']")).click();
-        //driver.sleep(2000);
     });
 
     Then('I choose an hour for selected movie', function () {
@@ -54,7 +46,6 @@ defineSupportCode(function({ Given, Then, When }) {
     });
 
     Then('I choose to Continue as guest', function () {
-
         driver.findElement(By.xpath("/html//div[@id='root']//section[@role='main']/section[@class='main']//a[@href='/boletos']")).click();
         driver.sleep(500);
     });
@@ -63,7 +54,6 @@ defineSupportCode(function({ Given, Then, When }) {
         const buyFrame = driver.findElement(By.xpath("//iframe[contains(@src,'//8267269.fls.doubleclick.net/activityi;src=8267269;type=mx-upi;cat=mx_ci00d;ord=4288792015676;gtm=2wg340;auiddc=94932097.1584384447;~oref=https%3A%2F%2Fcompra.cinepolis.com%2F%3FcinemaVistaId%3D208%26showtimeVistaId%3D8758?')]"));
         driver.switchTo().frame(buyFrame); 
         driver.sleep(500);
-        //driver.wait(until.elementLocated(By.xpath("/html//div[@id='root']/div[@class='page-wrap']/section[@role='main']/section[@class='main']/div//ul[@class='nostyle ticket__list']/li[1]/div[@class='ticket__col ticket__qty']/div[@class='ticket__actions']/button[2]")), 10000).click();
         driver.findElement(By.xpath("//button[@class='ticket__action'][@aria-label='Añadir un boleto ADULTO']")).click();
         driver.sleep(500);
     });
@@ -80,11 +70,8 @@ defineSupportCode(function({ Given, Then, When }) {
     });
 
     Then('I fill the Personal Info Section', function () {
-        
         driver.findElement(By.xpath("/html//input[@id='first_name']")).sendKeys('Alan');
         driver.findElement(By.xpath("/html//input[@id='last_name']")).sendKeys('Arguello');
         driver.findElement(By.xpath("/html//input[@id='email']")).sendKeys('alan.arguello@gmail.com');
-
     });
-
 });

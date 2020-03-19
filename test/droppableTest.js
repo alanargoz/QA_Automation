@@ -1,8 +1,7 @@
 const assert = require('assert');
 
 describe('Go to ToolsQA WebPage Droppable', () => {
-    it('Drag and drop item and verify the action', () => {
-      
+    it('Drag and drop item and verify the action', () => { 
         browser.url('https://demoqa.com/droppable/');
         const draggable = $("#draggable");
         const droppable = $("#droppable");

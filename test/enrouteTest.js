@@ -35,7 +35,7 @@ describe('Complete Enroute QA Automation', () => {
             else{
                 console.log('The tab number ' + i + 'is empty')
             }
-                browser.pause(1000);
+            browser.pause(1000);
         }
     });   
         
