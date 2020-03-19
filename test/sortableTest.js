@@ -2,7 +2,6 @@ describe('Go to ToolsQA WebPage Sortable', () => {
     it('Sort the items', () => {
       
         browser.url('https://demoqa.com/sortable/');
-
         const one = $("//ul[@id='sortable']/li[1]");
         const two = $("//ul[@id='sortable']/li[2]");
         const three = $("//ul[@id='sortable']/li[3]");
@@ -66,6 +65,5 @@ describe('Go to ToolsQA WebPage Sortable', () => {
             else {
                 console.log('The was a problem! List not reverse sorted');
             }
-
     });
 });

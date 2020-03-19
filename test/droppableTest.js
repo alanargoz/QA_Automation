@@ -1,4 +1,3 @@
-
 const assert = require('assert');
 
 describe('Go to ToolsQA WebPage Droppable', () => {
@@ -18,7 +17,5 @@ describe('Go to ToolsQA WebPage Droppable', () => {
         else{
             console.log('Not executed!');
         }
-
-
     });
 });
